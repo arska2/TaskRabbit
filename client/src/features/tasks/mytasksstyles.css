@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+
+
+.my-tasks-heading{
+    position:relative;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    color:#282c34;
+    font-size: 1.8em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    text-align: left;
+    
+}
+
+/*body{
+    background-image: linear-gradient(120deg, #845EC2, white);
+    min-height: 100vh;
+}*/
+
+.container{
+    max-width: 800;
+    margin: auto;
+    padding: 10px;
+}
+
+.style{
+    background: rgba(255,255,255,0.5);
+    padding: 18px;
+    margin: 6px 0;
+    overflow: hidden;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 200;
+    color:#282c34;
+    text-align: left;
+
+}
+
+.buttongroup {
+    text-align: left;
+}
+
+.txtb{
+    background: rgba(255,255,255,0.5);
+}
+ .cell{
+    font-family: 'Open Sans', sans-serif;
+    text-align: left;
+ }
+
+ .cell2{
+    font-family: 'Open Sans', sans-serif;
+ }
+
+ .lowercell{
+    font-family: 'Open Sans', sans-serif;
+    text-align: left;
+    font-weight:normal;
+    font-size: 0.9em;
+    font-style: normal;
+
+
+ }
+
+ .lowertitle{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1em;
+    font-weight: bolder;
+ }
+ .lowertext{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8em;
+    text-align: left;
+    font-weight: bolder;
+
+
+
+ }

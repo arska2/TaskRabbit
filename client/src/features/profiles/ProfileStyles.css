@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+h2{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.7em;
+    font-weight: bold;
+    margin-top: 20px;
+
+}
+
+.text-style{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
+}
+
+.pallo{
+    padding-top: 15px;
+
+}

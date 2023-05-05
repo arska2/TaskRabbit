@@ -1,0 +1,40 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-image: linear-gradient(120deg, black, black);
+}
+
+.navbar__left {
+  flex: 1;
+}
+
+.navbar__title {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.navbar__right {
+  display: flex;
+}
+
+.navbar__button {
+  background-color: #845EC2;
+  border: none;
+  padding: 10px 20px;
+  margin-left: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar__button:hover {
+  background-color: #00C2A8;
+  color: black
+}
