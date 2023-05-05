@@ -8,6 +8,8 @@ import { MarkerIcons } from "./MarkerIcons";
 import Checkbox from '@mui/material/Checkbox';
 import { CircleImage } from "../images/CircleImage";
 
+
+
 const libraries = ["places"]
 
 const getUserLocation = () => {
@@ -33,7 +35,7 @@ export const MapContainer = () => {
     const [selectedProfile, setSelectedProfile] = React.useState({})
 
     const { isLoaded, loadError } = useLoadScript({
-        googleMapsApiKey: "AIzaSyBWdAmavWXVzoZlEhuGBlyek4EfhS7i78A",
+        googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
         libraries: libraries,
     })
 

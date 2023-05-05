@@ -38,7 +38,7 @@ export function Navbar() {
     </div>
     <div className="navbar__right">
       <Link to="/" className='navbar__button'>Home</Link>
-      {user.id === 3 && <div className="navbar__right">
+      {user.id === 1 && <div className="navbar__right">
         <Link to="/admin" className='navbar__button'>Admin View</Link>
       </div>}
       {user.id && <div className='navbar__right'>

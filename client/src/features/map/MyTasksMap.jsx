@@ -28,7 +28,7 @@ const getUserLocation = () => {
 export const MyTasksMap = () => {
     const [selectedTask, setSelectedTask] = React.useState({})
     const { isLoaded, loadError } = useLoadScript({
-        googleMapsApiKey: "AIzaSyBWdAmavWXVzoZlEhuGBlyek4EfhS7i78A",
+        googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
         libraries
     })
     const user = useSelector(state => state.userReducer.user)

@@ -16,16 +16,16 @@ import './features/profiles/ProfileStyles.css'
 
 function App() {
 
-  
+
   const ws = new WebSocket('ws://localhost:8080/my/uri');
 
   return (
     //Avaa websocketin koko sovelluksen auetessa
     <WebSocketContext.Provider value={ws}>
-    <div className="App">
-      <Navbar />
-      <Main/>
-    </div>
+      <div className="App">
+        <Navbar />
+        <Main />
+      </div>
     </WebSocketContext.Provider>
 
   );
