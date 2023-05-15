@@ -106,20 +106,21 @@ export const TaskContainer = ({ ws }) => {
     return (
 
         <section className="task-container">
-            <div className="row d-flex text-start" style={{ height: "40px" }}>
+            <div className="row d-flex text-start task-settings" style={{ height: "40px" }}>
                 <div className="col-4 ">
-                    <select className="" aria-label="Default select example" onChange={ev => setSearchOption(ev.target.value)} >
+                    <p className="mb-1">Search</p>
+                    {/* <select className="" aria-label="Default select example" onChange={ev => setSearchOption(ev.target.value)} >
                         <option value="task">Task</option>
                         <option value="username">Username</option>
-                    </select>
-                    <input placeholder="Search" onChange={ev => setSearchText(ev.target.value)}></input>
+                    </select> */}
+                    <input placeholder="Search" onChange={ev => setSearchText(ev.target.value)} style={{ backgroundColor: "#845EC2", color: "#000000" }}></input>
                 </div>
 
 
 
                 <div className="col-2">
                     <p className="mb-1">Duration</p>
-                    <select className="" aria-label="Default select example" onChange={ev => setDurationRange(ev.target.value)}>
+                    <select className="" aria-label="Default select example" onChange={ev => setDurationRange(ev.target.value)} style={{ backgroundColor: "#845EC2", color: "#000000" }}>
                         <option value="all">All</option>
                         <option value="short">0-10 min</option>
                         <option value="medium">10-30 min</option>
@@ -129,23 +130,24 @@ export const TaskContainer = ({ ws }) => {
 
                 <div className="col-3">
                     <p className="mb-1">Sort by</p>
-                    <select className="" aria-label="Default select example" onChange={ev => setSortBy(ev.target.value)}>
+                    <select className="" aria-label="Default select example" onChange={ev => setSortBy(ev.target.value)} style={{ backgroundColor: "#845EC2", color: "#000000" }}>
                         <option value="all">All</option>
                         <option value="time">Most Recent</option>
                         <option value="price">Price</option>
                     </select>
                 </div>
 
-                <div className="col-2 ">
+                <div className="col-1 text-center">
                     <a>Available</a>
                     <Checkbox checked={showOnlyAvailable} onChange={event => setShowOnlyAvailable(!showOnlyAvailable)} inputProps={{ 'aria-label': 'Show Available' }} />
                 </div>
-                <div className="col-1 ">
+                <div className="col-1 text-center">
                     <a>All</a>
                     <Checkbox checked={showAll} onChange={event => setShowAll(!showAll)} inputProps={{ 'aria-label': 'Show all' }} />
                 </div>
 
             </div>
+
             <div className="task-list">
                 {content}
             </div>

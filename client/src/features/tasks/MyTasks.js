@@ -53,56 +53,56 @@ export const MyTasks = () => {
 
   if (isLoadingCreatedTasks || isLoadingPerformerTasks) return (<p>Login to see My Tasks</p>)
 
-return (
-  <div >
-    <h1 className="my-tasks-heading" style={{ marginBottom: '20px', marginLeft: '10px' }}>My Tasks</h1>
-    <div>
-      <ButtonGroup class="buttongroup" color="secondary" style={{ marginBottom: '20px', marginLeft: '10px' }}>
-        <Button variant={activeButton === 'created' ? 'contained' : 'outlined'} onClick={handleCreatedTasksClick}>Created Tasks</Button>
-        <Button variant={activeButton === 'performed' ? 'contained' : 'outlined'} onClick={handlePerformedTasksClick}>Tasks In Progress</Button>
-      </ButtonGroup>
-      
-    </div>
-    <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gridColumnGap: '20px', gridRowGap: '20px' }} >
-      <TableContainer class="txtb" component={Paper}>
-        <Table aria-label="collapsible table">
-          <TableHead>
-            {showPerformedTasks && <TableRow >
-              <TableCell class="cell" />
-              <TableCell class="cell" >Task</TableCell>
-              <TableCell class="cell" align="left" >Creator</TableCell>
-              <TableCell class="cell" align="left">Time left</TableCell>
-              <TableCell class="cell" align="left">Location</TableCell>
-              <TableCell class="cell" align="left">Payment (€)</TableCell>
-              <TableCell class="cell" align="left">Progress</TableCell>
-            </TableRow>}
-            {showCreatedTasks && <TableRow>
-              <TableCell class="cell" />
-              <TableCell class="cell">Created Task</TableCell>
-              <TableCell class="cell" align="left">Performer</TableCell>
-              <TableCell class="cell" align="left">Status</TableCell>
-              <TableCell class="cell" align="left">Location</TableCell>
-              <TableCell class="cell" align="left">Payment (€)</TableCell>
-              <TableCell class="cell" align="left"></TableCell>
-            </TableRow>}
-          </TableHead>
+  return (
+    <div >
+
+      <div>
+        <ButtonGroup class="buttongroup" color="secondary" style={{ marginBottom: '20px', marginLeft: '10px' }}>
+          <Button variant={activeButton === 'created' ? 'contained' : 'outlined'} onClick={handleCreatedTasksClick}>Created Tasks</Button>
+          <Button variant={activeButton === 'performed' ? 'contained' : 'outlined'} onClick={handlePerformedTasksClick}>Tasks In Progress</Button>
+        </ButtonGroup>
+
+      </div>
+      <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gridColumnGap: '20px', gridRowGap: '20px' }} >
+        <TableContainer class="txtb" component={Paper}>
+          <Table aria-label="collapsible table">
+            <TableHead>
+              {showPerformedTasks && <TableRow >
+                <TableCell class="cell" />
+                <TableCell class="cell" >Task</TableCell>
+                <TableCell class="cell" align="left" >Creator</TableCell>
+                <TableCell class="cell" align="left">Time left</TableCell>
+                <TableCell class="cell" align="left">Location</TableCell>
+                <TableCell class="cell" align="left">Payment (€)</TableCell>
+                <TableCell class="cell" align="left">Progress</TableCell>
+              </TableRow>}
+              {showCreatedTasks && <TableRow>
+                <TableCell class="cell" />
+                <TableCell class="cell">Created Task</TableCell>
+                <TableCell class="cell" align="left">Performer</TableCell>
+                <TableCell class="cell" align="left">Status</TableCell>
+                <TableCell class="cell" align="left">Location</TableCell>
+                <TableCell class="cell" align="left">Payment (€)</TableCell>
+                <TableCell class="cell" align="left"></TableCell>
+              </TableRow>}
+            </TableHead>
             <TableBody>
               {showPerformedTasks &&
                 performerTasks
                   .filter((task) => task.performer.id === user.id)
-                  .map((task) => <Row key={task.id} task={task}/>)}
+                  .map((task) => <Row key={task.id} task={task} />)}
               {showCreatedTasks &&
                 filteredCreatedTasks
                   .filter((task) => task.creator.id === user.id)
-                  .map((task) => <RowCreated key={task.id} task={task}/> )}
-                  
+                  .map((task) => <RowCreated key={task.id} task={task} />)}
+
             </TableBody>
-        </Table>
-      </TableContainer>
-      <div style={{ position: 'fixed', right: '0', top: '120px', bottom: '0.5px', width: '35%', margin: '0 15px 50px 20px' }} className="col-4">
-        <MyTasksMap />
+          </Table>
+        </TableContainer>
+        <div style={{ position: 'fixed', right: '0', top: '120px', bottom: '0.5px', width: '35%', margin: '0 15px 50px 20px' }} className="col-4">
+          <MyTasksMap />
+        </div>
       </div>
     </div>
-  </div>
-);
+  );
 };

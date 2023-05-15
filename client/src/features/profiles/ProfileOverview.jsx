@@ -13,7 +13,7 @@ export const ProfileOverview = () => {
     const { data: profile, isLoading: isLoadingProfile } = useGetProfileByIdQuery(user.id)
     const { data: reviews = [], isLoading: isLoadingReviews } = useGetReviewsQuery();
     const { data: imageInfo, isLoading: isLoadingInfo } = useGetImageInfoQuery(user.id);
-    console.log(profile)
+    console.log(imageInfo)
     if (isLoadingInfo || isLoadingProfile || isLoadingReviews) return <p>Loading...</p>
 
     const filteredReviews = reviews.filter(review => review.targetuser_id === user.id);

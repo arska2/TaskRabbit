@@ -108,9 +108,9 @@ export const MapContainer = () => {
     if (!isLoaded) return <div>Loading...</div>
 
     return (<div>
-        <div className="row d-flex align-middle" style={{ height: "40px" }}>
+        <div className="row d-flex align-middle task-settings text-start" style={{ height: "40px" }}>
             <div className="col-3">
-                Search For Location
+                Search Map
                 <Autocomplete
                     onLoad={(autoComplete) => autoCompleteRef.current = autoComplete}
                     onPlaceChanged={() => onPlaceSelect(autoCompleteRef.current.getPlace())}
@@ -118,6 +118,7 @@ export const MapContainer = () => {
                     <input
                         type="text"
                         placeholder="Enter an address"
+                        style={{ backgroundColor: "#845EC2", color: "#000000" }}
                     />
                 </Autocomplete>
 
@@ -125,10 +126,9 @@ export const MapContainer = () => {
             <div className="col-3">
 
             </div>
-            <div className="col-2">
+            <div className="col-2 text-center">
                 <a>Show Users</a>
                 <Checkbox checked={showUsers} onChange={event => setShowUsers(!showUsers)} inputProps={{ 'aria-label': 'Show Users' }} />
-
             </div>
 
             <div className="col-1">

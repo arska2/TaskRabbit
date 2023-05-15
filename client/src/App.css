@@ -59,11 +59,11 @@
 
 
 .task-excerpt:hover {
-  box-shadow: 0 0 15px #845EC2;
+  box-shadow: 0 0 20px #845EC2;
 }
 
 .task-list .task-excerpt+.task-excerpt {
-  margin-top: 0.9rem;
+  margin-top: 0.8rem;
 }
 
 .task-excerpt h3 {
@@ -71,6 +71,16 @@
   font-size: 1.5rem;
   font-style: initial;
   font-family: 'Open Sans', sans-serif;
+}
+
+.task-excerpt {
+  font-size: 1.0em;
+  color: #000000;
+  background: linear-gradient(to top, #008c79, #00C2A8);
+}
+
+.task-excerpt:hover {
+  background: linear-gradient(to top, #845EC2, #00C2A8);
 }
 
 .button {
@@ -122,6 +132,7 @@
   border-radius: 10px;
   border: 1px solid black;
   margin-top: 20px;
+  margin-right: 10px;
 }
 
 /*body {
@@ -203,7 +214,8 @@
   border-radius: 10px;
   border: 1px solid black;
   padding: 0;
-  margin: 20px;
+  margin-top: 20px;
+  margin-left: 10px;
   height: calc(50vw - 200px);
   position: relative;
 }
@@ -216,13 +228,13 @@
 .task-excerpt {
   display: flex;
   align-items: left;
-  margin-left: 1%;
-  margin-right: 5%;
+
   font-family: 'Open Sans', sans-serif;
   padding: 0.8rem 0.25rem;
-  border: 1px solid rgb(177, 174, 174);
+  border: 1px solid rgb(0, 0, 0);
   border-radius: 7px;
 }
+
 
 .task-info {
   display: flex;
@@ -232,8 +244,7 @@
   margin-top: 5px;
   margin-bottom: 5px;
   width: 800px;
-  src:url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap')
-
+  src: url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap')
 }
 
 .task-title {
@@ -346,3 +357,14 @@
   align-items: center;
 }
 
+main {
+  background: linear-gradient(to top, #4FFBDF, #000000);
+  height: 100vh;
+
+}
+
+.task-settings {
+  color: #845EC2;
+  font-weight: 700;
+  margin-left: 10px;
+}
