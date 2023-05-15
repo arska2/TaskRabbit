@@ -24,9 +24,7 @@ const ProfileSummary = ({ profile, imageInfo, reviews }) => {
         backgroundSize: "cover",
         width: "100%",
         height: "200px",
-        border: "1px solid #ccc",
-
-
+        border: "1px solid #ccc"
     };
 
     const profileStyle = {

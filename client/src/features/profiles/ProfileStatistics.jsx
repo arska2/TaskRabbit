@@ -15,8 +15,8 @@ export const ProfileStatistics = () => {
     console.log(statistics)
     if (isLoading || !statistics) return <p> Loading...</p>
     return (
-        <div className="text-style">
-            <h2>Overview</h2>
+        <div className="text-style" style={{ color: "#00C2A8" }}>
+            <h2 style={{ color: "#00C2A8" }}>Overview</h2>
             <Grid container spacing={0} alignItems="center" justifyContent="center" style={{ textAlign: "center" }} columns={6}>
                 <Grid item xs={2}>
                     <PlaylistAddCheckRoundedIcon />

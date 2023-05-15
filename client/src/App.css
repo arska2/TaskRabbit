@@ -83,6 +83,11 @@
   background: linear-gradient(to top, #845EC2, #00C2A8);
 }
 
+
+.gradient-bg {
+  background: linear-gradient(to top, #008c79, #00C2A8);
+}
+
 .button {
   background-color: #c2fbd7;
   border-radius: 100px;

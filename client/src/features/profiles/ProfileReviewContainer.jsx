@@ -14,9 +14,9 @@ const ReviewExcerpt = ({ review }) => {
     console.log(review)
     const { data: imageInfo } = useGetImageInfoQuery(review.performer_id)
     return (
-        <div >
-            <div key={user.id} className="reviewi"  >
-                {imageInfo?.profileImageUrl && <div className="pallo"><CircleImage size={40} imageSrc={imageInfo.profileImageUrl}/></div>}
+        <div>
+            <div key={user.id} className="reviewi gradient-bg"  >
+                {imageInfo?.profileImageUrl && <div className="pallo"><CircleImage size={40} imageSrc={imageInfo.profileImageUrl} /></div>}
                 <Box
                     sx={{
                         '& > legend': { mt: 2 },
@@ -40,8 +40,8 @@ export const ProfileReviewContainer = () => {
     let content = filteredReviews.map(review => <ReviewExcerpt key={user.id} review={review} />);
 
     return (
-        <div>
-            <h2>Profile Reviews</h2>
+        <div >
+            <h2 style={{ color: "#00C2A8" }}>Profile Reviews</h2>
             <div className="reviewList">
                 {content}
             </div>
