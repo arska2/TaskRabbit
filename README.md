@@ -89,7 +89,7 @@ This project uses a combination of front-end, back-end, and cloud technologies. 
 - Start React App  
 `npm start`
 
-The back-end database API is hosted on port localhost:8080, and the front-end React app can be found at localhost:3000.
+The back-end database API is hosted on localhost:8080, and the front-end React app can be found at localhost:3000.
 
 
 
