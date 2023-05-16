@@ -79,7 +79,8 @@ This project uses a combination of front-end, back-end, and cloud technologies. 
 
 - Clone the repository  
 `git clone git@github.com:arska2/TaskRabbit.git`  
-- Use taskrabbit.sql (in root directory of this repository) to set up the MySQL database locally
+- Use taskrabbit.sql (in root directory of this repository) to set up the MySQL database locally  
+`mysql -u <username> -p <database_name> < taskrabbit.sql`
 - start server (run in server folder)   
     `mvnw spring-boot:run`   
 - Install front-end dependencies   
@@ -88,8 +89,7 @@ This project uses a combination of front-end, back-end, and cloud technologies. 
 - Start React App  
 `npm start`
 
-The back-end database api is hosted on port localhost:8080 and the front-end React app can be found at localhost:3000.
-
+The back-end database API is hosted on port localhost:8080, and the front-end React app can be found at localhost:3000.
 
 
 
