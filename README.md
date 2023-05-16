@@ -25,6 +25,9 @@ The Users Page in TaskRabbit provides a comprehensive directory of all applicati
 
 ## Techniques
 
+
+
+
 ### Front-end
 
 <table>
@@ -80,6 +83,8 @@ The Users Page in TaskRabbit provides a comprehensive directory of all applicati
 </table>
 
 This project uses a combination of front-end, back-end, and cloud technologies. On the front-end, the project uses JavaScript as its main programming language, React as the main library for building user interfaces, React Redux for state management, RTK Query for data fetching, and Bootstrap for responsive web design. On the back-end, the project uses Java as the main programming language, Spring Boot as the main framework, and MySQL as the database. The project is deployed on the AWS cloud platform and utilizes various services such as RDS for the MySQL database, Elastic Beanstalk for deployments, and S3 for storing static assets.
+
+
 
 ## Installation
 
